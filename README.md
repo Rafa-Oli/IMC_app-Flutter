@@ -7,6 +7,15 @@
 
 
 
+##### Alguns dos Widgets mais utilizados:
+ - Stateful
+ - AppBar
+ - Column & Row
+ - Text Form Field, para utilizar o validator
+ 
+
+
+
 
 
 
