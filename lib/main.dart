@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
     heightController.text = "";
     setState(() {
       _infoText = "Informe seus dados!";
+      _formKey = GlobalKey<FormState>();
     });
   }
 
@@ -26,6 +27,7 @@ class _HomeState extends State<Home> {
       double weight = double.parse(weightController.text);
       double height = double.parse(heightController.text) / 100;
       double imc = weight / (height * height);
+      print(imc);
       if (imc < 18.6) {
         _infoText = 'Abaixo do Peso (${imc.toStringAsFixed(2)})';
       } else if (imc >= 18.6 && imc < 24.9) {
@@ -98,10 +100,11 @@ class _HomeState extends State<Home> {
                   child: RaisedButton(
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
-                        //verificando se a informação é valida
-                        _calculate;
+                        _calculate();
                       }
                     },
+                    //verificando se a informação é valida
+
                     child: Text(
                       "Calcular",
                       style: TextStyle(color: Colors.white, fontSize: 20.0),
@@ -111,7 +114,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Text(
-                'Info',
+                _infoText,
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.purple[300], fontSize: 20.0),
               )
