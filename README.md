@@ -1,6 +1,15 @@
-# imc
+# IMC
 
-A new Flutter project.
+### Cálculo de IMC - Índice de Massa Corporal
+
+
+<img height="450" align="center" src="https://imgur.com/XfGZDPJ.gif" alt="projeto" />
+
+
+
+
+
+
 
 ## Getting Started
 
